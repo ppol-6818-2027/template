@@ -28,4 +28,5 @@ The student must be able to give evidence that AI-written code works. For every 
 
 - `run.R` runs everything from a fresh clone: it downloads the data, then sources the scripts in order. Keep it that way; a new script gets a line in `run.R`.
 - Paths are relative to the repository root. No `setwd()`, no absolute paths.
-- Commit small steps with clear messages, and push when a piece works. The repository is private and belongs to the course organization; only the published minisite is public, so nothing in the site build may include data or keys.
+- Commit small steps with clear messages, and push when a piece works. The repository is private and belongs to the course organization.
+- The minisite is built into `docs/` and only `docs/` is published, publicly, by GitHub Pages. With Quarto, set `output-dir: docs`. Nothing in `docs/` may include data, keys or anything the student has not chosen to publish.

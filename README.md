@@ -4,4 +4,5 @@ Open `project.Rproj` in RStudio. Click **Addins > Course agent** to work with th
 
 - `run.R` runs everything from a fresh clone, including downloading your IPUMS data with your own key.
 - `data/` holds downloaded data and is never committed: the IPUMS terms do not allow sharing it.
+- `docs/` holds the built minisite. It is the only public part of this repository.
 - `AGENTS.md` tells the AI agents the course rules. Every sentence you submit is your own; the agents write code, not prose.
