@@ -1,0 +1,16 @@
+# Data never goes into this repository (IPUMS terms); run.R downloads it.
+data/
+*.dta
+*.csv.gz
+*.dat.gz
+*.xml
+
+# R and RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Renviron
+
+# Quarto build output
+_site/
+.quarto/
