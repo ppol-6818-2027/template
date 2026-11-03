@@ -21,7 +21,7 @@ The student must be able to give evidence that AI-written code works. For every 
 
 ## Data
 
-- IPUMS data never goes into git: the IPUMS terms forbid redistributing it. Everything under `data/` is ignored. Download extracts in `run.R` with `ipumsr`, which reads the student's key from `IPUMS_API_KEY` in `~/.Renviron` (course setup saved it). Never print or commit the key.
+- IPUMS data never goes into git: the IPUMS terms forbid redistributing it. Everything under `data/` is ignored. Download extracts in `run.R` with `ipumsr`, which reads the student's key from `IPUMS_API_KEY`: course setup saved it in the course folder's `.Renviron` (outside this repository), and `.Rprofile` loads it in every session. Never print or commit the key.
 - KoboToolbox forms and submissions: use the `kobo` tools connected to this agent (list, get, deploy and export forms; get submissions). The student's own account holds the forms.
 
 ## How the repository runs
