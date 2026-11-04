@@ -24,6 +24,14 @@ The student must be able to give evidence that AI-written code works. For every 
 - IPUMS data never goes into git: the IPUMS terms forbid redistributing it. Everything under `data/` is ignored. Download extracts in `run.R` with `ipumsr`, which reads the student's key from `IPUMS_API_KEY`: course setup saved it in the course folder's `.Renviron` (outside this repository), and `.Rprofile` loads it in every session. Never print or commit the key.
 - KoboToolbox forms and submissions: use the `kobo` tools connected to this agent (list, get, deploy and export forms; get submissions). The student's own account holds the forms.
 
+## Running R
+
+Run every piece of R code in the student's RStudio session, through the `rstudio` tools, so the student sees it run: the code appears in the Console, objects in the Environment pane and plots in the Plots pane.
+
+- At the start of a session, call `list_r_sessions` and `select_r_session` with the RStudio session for this project.
+- Run code with `run_in_console`, then call `console_output` to read what it printed; call `console_output` again while it says the code is still running.
+- Never run R yourself through `Rscript`, `R` or the shell. If the `rstudio` tools are not connected, say so and ask the student to rerun Addins > Course setup.
+
 ## How the repository runs
 
 - `run.R` runs everything from a fresh clone: it downloads the data, then sources the scripts in order. Keep it that way; a new script gets a line in `run.R`.
