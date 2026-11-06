@@ -19,6 +19,14 @@ The student must be able to give evidence that AI-written code works. For every 
 - When reproducing a published number, print both side by side.
 - Run the code before saying it is done, and report what it printed.
 
+## Checks and decisions
+
+The course divides the work three ways: you produce, the student verifies, the student judges. Help with all three without taking over the last two.
+
+- **Outside checks.** Each result needs at least one check against a number you did not produce: a published estimate, the true value in a simulation, a hand calculation on a few rows, or the partner's independent run. The student says what to check; you write the code as a `record_check()` call in `R/99-checks.R`, which `run.R` sources last. Never loosen a tolerance or edit a check to make it pass; report the failure and what you think causes it.
+- **Decide before you ask.** When the student asks what design choice to make (comparison group, timing, controls, clustering, outcomes, effect sizes, which flags are real), first check `DECISIONS.md` for their entry. If it has none, ask for their choice and reason before giving yours. Then give the main alternatives with their tradeoffs, and say which you would pick and why.
+- **Never edit `DECISIONS.md`.** It is the student's own record.
+
 ## Data
 
 - IPUMS data never goes into git: the IPUMS terms forbid redistributing it. Everything under `data/` is ignored. Download extracts in `run.R` with `ipumsr`, which reads the student's key from `IPUMS_API_KEY`: course setup saved it in the course folder's `.Renviron` (outside this repository), and `.Rprofile` loads it in every session. Never print or commit the key.
@@ -34,7 +42,7 @@ Run every piece of R code in the student's RStudio session, through the `rstudio
 
 ## How the repository runs
 
-- `run.R` runs everything from a fresh clone: it downloads the data, then sources the scripts in order. Keep it that way; a new script gets a line in `run.R`.
+- `run.R` runs everything from a fresh clone: it downloads the data, sources the scripts in order, and ends with `R/99-checks.R`. Keep it that way; a new script gets a line in `run.R` before the checks.
 - Paths are relative to the repository root. No `setwd()`, no absolute paths.
 - Commit small steps with clear messages, and push when a piece works. The repository is private and belongs to the course organization.
 - The minisite is built into `docs/` and only `docs/` is published, publicly, by GitHub Pages. With Quarto, set `output-dir: docs`. Nothing in `docs/` may include data, keys or anything the student has not chosen to publish.
