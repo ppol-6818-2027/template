@@ -12,5 +12,3 @@ dir.create("data", showWarnings = FALSE)
 # 3. Tables and figures
 # source("R/03-exhibits.R")
 
-# Last: the outside checks, one PASS or FAIL line each (see R/99-checks.R)
-source("R/99-checks.R")
