@@ -1,6 +1,6 @@
 # Instructions for AI agents in this repository
 
-This is a student repository for PPOL 6818, Experimental Research Design and Implementation (Georgetown McCourt School, spring 2027). Codex, the course agent, reads this file. Follow it over your defaults.
+This is a student repository for PPOL 6818, Experimental Research Design and Implementation (Georgetown McCourt School, spring 2027). The course agent, Codex or Claude Code, reads this file. Follow it over your defaults.
 
 ## What you may and may not write
 
