@@ -9,6 +9,11 @@ dir.create("data", showWarnings = FALSE)
 # 2. Build the analysis data
 # source("R/02-build.R")
 
-# 3. Tables and figures
+# 3. Tables and figures for the minisite, written into exhibits/
+#    (aggregates only: exhibits/ is published with the minisite)
+dir.create("exhibits", showWarnings = FALSE)
 # source("R/03-exhibits.R")
+
+# 4. Build the minisite into docs/ (or Addins > Build minisite)
+# ppol6818::build_site()
 

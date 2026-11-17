@@ -1,0 +1,26 @@
+---
+title: "Your policy question"
+subtitle: "Partner One and Partner Two"
+format:
+  revealjs:
+    theme: [default, site/deck.scss]
+    slide-number: true
+    hash-type: number
+---
+
+<!--
+One slide a week (course rules, "Weekly slide"): the week's exhibit and your
+own 50 to 100 words about it. Add each new slide below the last one, by
+copying this pattern. Exhibits are files run.R writes into exhibits/.
+
+## Week 2: Policy data map {.smaller}
+
+[Week 2]{.week}
+
+![](exhibits/week02.png){height="420"}
+
+::: {.slide-note}
+Your 50 to 100 words about this exhibit.
+:::
+-->
+

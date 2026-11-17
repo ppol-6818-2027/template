@@ -1,0 +1,29 @@
+# The minisite: a landing page and a slide deck, built into docs/, the only
+# public part of this repository. Build it with ppol6818::build_site().
+# Nothing runs during the build: run.R writes the exhibits into exhibits/,
+# and the pages show them.
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - deck.qmd
+  resources:
+    - exhibits/*
+
+website:
+  title: "PPOL 6818 project"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Plan
+      - href: deck.qmd
+        text: Deck
+
+execute:
+  enabled: false
+
+format:
+  html:
+    theme: [cosmo, site/theme.scss]
+    toc: true

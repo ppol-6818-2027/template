@@ -1,0 +1,27 @@
+---
+title: "Your policy question"
+subtitle: "Partner One and Partner Two"
+---
+
+<!--
+The landing page of your minisite. Every sentence on it is yours (course AI
+policy); your agent builds the site and draws the figures, nothing else.
+It starts as the pair and policy with an abstract and grows into your
+pre-analysis plan. Exhibits come from files run.R writes into exhibits/.
+-->
+
+[Deck](deck.qmd) · [Repository]({{< env REPO_URL >}})
+
+## Abstract
+
+Write your abstract here, in your own words.
+
+## Design memo
+
+## Survey
+
+## Power
+
+## Results and robustness
+
+## Pre-analysis plan

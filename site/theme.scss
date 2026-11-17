@@ -1,0 +1,7 @@
+/*-- scss:defaults --*/
+$primary: #041E42;
+$headings-color: #041E42;
+$font-size-root: 17px;
+/*-- scss:rules --*/
+main.content { max-width: 760px; }
+figure img, p img { border: 1px solid #e2e8f0; border-radius: 6px; }
