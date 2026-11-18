@@ -29,7 +29,7 @@ The course divides the work three ways: you produce the code; the student verifi
 
 ## Data
 
-- IPUMS data never goes into git: the IPUMS terms forbid redistributing it. Everything under `data/` is ignored. Download extracts in `run.R` with `ipumsr`, which reads the student's key from `IPUMS_API_KEY`: course setup saved it in the course folder's `.Renviron` (outside this repository), and `.Rprofile` loads it in every session. Never print or commit the key.
+- IPUMS data never goes into git or the minisite: everything under `data/` is ignored, and only aggregates go in `exhibits/`. Get every extract in `run.R` with `ppol6818::ipums_get(name, samples, variables)`, never with `ipumsr::download_extract` directly: it reuses a saved or already-made extract, stores it as Parquet in `data/ipums/`, and reports its size. Keep extracts small: restrict people with `ipumsr::var_spec(..., case_selections = ...)` and ask only for the variables the analysis uses. Read with `ppol6818::ipums_read(name, columns, where)`, which filters before loading, and get value labels with `ppol6818::ipums_labels(name, var)`. The key is `IPUMS_API_KEY` (in a codespace, the course's own key, an organization secret). Never print or commit it. Example: `inst/examples/ipums-extract.R` in the ppol6818 package.
 - KoboToolbox forms and submissions: use the `kobo_*` functions in the `ppol6818` package through the R console tool; run `kobo_help()` first for the list and the deploy, translate and data workflows. The student's own account holds the forms.
 
 ## Running R

@@ -3,6 +3,7 @@ data/
 *.dta
 *.csv.gz
 *.dat.gz
+*.parquet
 *.xml
 
 # R and RStudio
