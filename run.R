@@ -19,7 +19,7 @@ dir.create("exhibits", showWarnings = FALSE)
 source("midterm/run.R")
 source("final/run.R")
 
-# 5. Build the minisite into docs/: in the R terminal, ppol6818::build_site()
-#    (in RStudio, Addins > Build minisite)
+# 5. Build the minisite into docs/: Build minisite in the PPOL 6818 panel,
+#    or ppol6818::build_site() in the R console
 # ppol6818::build_site()
 

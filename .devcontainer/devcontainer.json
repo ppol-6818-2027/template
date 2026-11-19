@@ -1,10 +1,19 @@
 {
   "name": "PPOL 6818",
   "image": "ghcr.io/ppol-6818-2027/course-image:latest",
-  "hostRequirements": { "cpus": 2 },
-  "postAttachCommand": { "rstudio": "ppol6818-rstudio" },
-  "forwardPorts": [8787],
-  "portsAttributes": {
-    "8787": { "label": "RStudio", "requireLocalPort": true, "onAutoForward": "openBrowser" }
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "workspaceFolder": "/workspaces",
+  "customizations": {
+    "codespaces": {
+      "repositories": {
+        "ppol-6818-2027/*": {
+          "permissions": {
+            "contents": "write"
+          }
+        }
+      }
+    }
   }
 }

@@ -43,18 +43,18 @@ The course divides the work three ways: you produce the code; the student verifi
 
 ## Running R
 
-Run every piece of R code in the student's RStudio session, through the `rstudio` tools, so the student sees it run: the code appears in the Console, objects in the Environment pane and plots in the Plots pane.
+Run every piece of R code in the student's R console, the R terminal in VS Code, through the `r-console` tools, so the student sees it run: the code and its output appear in the console, and the objects it makes stay in the session. Figures are saved to files (`ggsave()` into `exhibits/`), which the student opens by clicking them in the file list.
 
-- At the start of a session, call `list_r_sessions` and `select_r_session` with the RStudio session for this project.
-- Run code with `run_in_console`, then call `console_output` to read what it printed; call `console_output` again while it says the code is still running.
-- Never run R yourself through `Rscript`, `R` or the shell. If the `rstudio` tools are not connected, say so and ask the student to rerun Addins > Course setup.
+- Run code with `run_in_console`; it returns what the code printed, with any messages, warnings and errors. Give it `folder`, this repository's full path (`/workspaces/<repository>`): the console may sit in the student's lab repository.
+- If it says no console is connected, follow what it says (`list_r_sessions`, then `select_r_session`).
+- Never run R yourself through `Rscript`, `R` or the shell. If the `r-console` tools are missing, say so and ask the student to click Course setup in the PPOL 6818 panel.
 
 ## How the repository runs
 
 - `run.R` runs everything from a fresh clone: it downloads the data and sources the scripts in order. Keep it that way; a new script gets a line in `run.R`.
 - Paths are relative to the repository root. No `setwd()`, no absolute paths.
 - Commit small steps with clear messages, and push when a piece works. The repository is private and belongs to the course organization.
-- The minisite is a Quarto website at the repository root: `_quarto.yml`, the landing page `index.qmd`, the deck `deck.qmd` (a PDF through Typst, format `deck-typst`, shown on `deck/index.qmd`), and a page for each paper that shows its PDF. It is built into `docs/` with `ppol6818::build_site()` in the R terminal (Addins > Build minisite in RStudio), and only `docs/` is published, publicly, by GitHub Pages. The build first pulls the partner's pushed work, then stops if an exhibit a page or paper shows is missing. Keep `execute: enabled: false`: no code runs during the build, so the papers hold no R code chunks.
+- The minisite is a Quarto website at the repository root: `_quarto.yml`, the landing page `index.qmd`, the deck `deck.qmd` (a PDF through Typst, format `deck-typst`, shown on `deck/index.qmd`), and a page for each paper that shows its PDF. It is built into `docs/` with `ppol6818::build_site()` in the R console (Build minisite in the PPOL 6818 panel), and only `docs/` is published, publicly, by GitHub Pages. The build first pulls the partner's pushed work, then stops if an exhibit a page or paper shows is missing. Keep `execute: enabled: false`: no code runs during the build, so the papers hold no R code chunks.
 - `midterm/run.R` and `final/run.R` make each paper's exhibits into `midterm/exhibits/` and `final/exhibits/`, and the root `run.R` runs both. A paper shows a figure as `![Caption.](exhibits/figure1.png){#fig-name}` and a table, saved as Markdown with `knitr::kable()`, inside a `::: {#tbl-name}` block with `{{< include exhibits/table1.md >}}` and its caption.
 - Exhibits reach the landing page and deck through `exhibits/`: scripts sourced by `run.R` write each figure there (`ggsave("exhibits/week02.png", ...)`), and the pages embed those files. The deck is a PDF, so its exhibits are images (`.png`), never web pages. Nothing in an `exhibits/` folder or in `docs/` may include microdata, rows of data, keys or anything the student has not chosen to publish: only aggregate tables and figures.
 - Never write the text of `index.qmd` or `deck.qmd` (the prose rule above). You may add the structure the student asks for: a new slide's heading and its `layout="[50,50]"` block with the image (the pattern in `deck.qmd`), a figure's embed code.
