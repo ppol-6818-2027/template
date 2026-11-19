@@ -1,8 +1,8 @@
-# The minisite: a landing page, a slide deck and the two papers, built into
+# The minisite: a landing page, the slide deck and the two papers, built into
 # docs/, the only public part of this repository. Build it with
-# ppol6818::build_site(). Each paper renders to a PDF (format paper-typst,
-# from _extensions/paper/), and its page (midterm/index.qmd,
-# final/index.qmd) shows that PDF. Nothing runs during the build: run.R
+# ppol6818::build_site(). The deck and each paper render to a PDF (formats
+# deck-typst and paper-typst, from _extensions/), and a page shows each PDF
+# (deck/index.qmd, midterm/index.qmd, final/index.qmd). Nothing runs during the build: run.R
 # writes the exhibits into exhibits/, midterm/exhibits/ and final/exhibits/,
 # and the pages and papers show them.
 project:
@@ -11,6 +11,7 @@ project:
   render:
     - index.qmd
     - deck.qmd
+    - deck/index.qmd
     - midterm/midterm.qmd
     - midterm/index.qmd
     - final/final.qmd
@@ -24,12 +25,15 @@ website:
     left:
       - href: index.qmd
         text: Plan
-      - href: deck.qmd
+      - href: deck/index.qmd
         text: Deck
       - href: midterm/index.qmd
         text: Registered report
       - href: final/index.qmd
         text: Final paper
+
+  page-footer:
+    center: "PPOL 6818 · McCourt School of Public Policy · Georgetown University"
 
 execute:
   enabled: false

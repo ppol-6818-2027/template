@@ -1,26 +1,23 @@
 ---
 title: "Your policy question"
-subtitle: "Partner One and Partner Two"
-format:
-  revealjs:
-    theme: [default, site/deck.scss]
-    slide-number: true
-    hash-type: number
+subtitle: "PPOL 6818 project"
+author: "Pair NN: your names"
+format: deck-typst
 ---
 
 <!--
-One slide a week (course rules, "Weekly slide"): the week's exhibit and your
-own 50 to 100 words about it. Add each new slide below the last one, by
-copying this pattern. Exhibits are files run.R writes into exhibits/.
+Your slide deck: one slide a week (course rules, "Weekly slide"), the week's
+exhibit and your own 50 to 100 words about it. The build renders it to
+deck.pdf, which the Deck page of your minisite shows; it follows
+Georgetown's look (format deck-typst, from _extensions/deck/). Each ## heading
+starts a slide. Add each new slide below the last one by copying this
+pattern; exhibits are files run.R writes into exhibits/ (a figure as .png).
 
-## Week 2: Policy data map {.smaller}
+## Week 2: Policy data map
 
-[Week 2]{.week}
+::: {layout="[50,50]"}
+![](exhibits/week02.png)
 
-![](exhibits/week02.png){height="420"}
-
-::: {.slide-note}
 Your 50 to 100 words about this exhibit.
 :::
 -->
-

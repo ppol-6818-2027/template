@@ -1,0 +1,16 @@
+title: PPOL 6818 deck
+author: Benjamin Daniels
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+      font-paths:
+        - fonts
+      papersize: presentation-16-9
+      number-sections: false
+      shift-heading-level-by: 0
+      fig-cap-location: bottom

@@ -1,10 +1,53 @@
+// The minisite's look: Georgetown's visual identity as the university posts
+// it (georgetown.edu/visual-identity, /color-guide and
+// /visual-identity-for-the-web, read 2026-11-18). Georgetown Blue leads,
+// Georgetown Gray and the secondary palette support; Caslon for headings
+// and Futura for text, here their open equivalents Libre Caslon Text and
+// Jost, the same as the deck (_extensions/deck/). No logo or seal: the
+// university approves each use of those.
+
 /*-- scss:defaults --*/
-$primary: #041E42;
-$headings-color: #041E42;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+
+$gu-blue: #041E42;   // Georgetown Blue, Pantone 282
+$gu-gray: #63666A;   // Georgetown Gray, Cool Gray 10
+$gu-link: #003DA5;   // Pantone 293
+$gu-rule: #BBBCBC;   // Cool Gray 4
+$gu-stone: #D6D2C4;  // Pantone 7527
+
+$primary: $gu-blue;
+$secondary: $gu-gray;
+$body-color: #1F2328;
+$link-color: $gu-link;
+$font-family-sans-serif: "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headings-font-family: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+$headings-font-weight: 400;
+$headings-color: $gu-blue;
 $font-size-root: 17px;
+$navbar-bg: $gu-blue;
+$navbar-fg: #ffffff;
+$navbar-hl: $gu-stone;
+$footer-bg: #ffffff;
+$footer-fg: $gu-gray;
+$toc-color: $gu-blue;
+$table-border-color: $gu-rule;
+
 /*-- scss:rules --*/
+.navbar-title { font-family: $headings-font-family; }
+h1, h2, h3, h4, .title { font-weight: 400; }
+h2 { border-bottom: 1px solid $gu-stone; }
+.quarto-title .title::after {
+  content: ""; display: block; width: 3rem; margin-top: 0.6rem;
+  border-bottom: 3px solid $gu-stone;
+}
+.quarto-title .subtitle { color: $gu-gray; font-family: $font-family-sans-serif; }
 main.content { max-width: 760px; }
 figure img, p img { border: 1px solid #e2e8f0; border-radius: 6px; }
+.nav-footer { border-top: 1px solid $gu-rule; font-size: 0.85rem; }
+
+// A paper's or the deck's page (site/_paper.md): the open button, then the
+// PDF itself; phones show only the button.
 .paper-open { margin-bottom: 1rem; }
-.paper-embed { height: 85vh; border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; }
+.paper-embed { height: 85vh; border: 1px solid $gu-rule; border-radius: 6px; overflow: hidden; }
+.deck-page .paper-embed { height: auto; aspect-ratio: 16 / 10; }
 @media (max-width: 767.98px) { .paper-embed { display: none; } }

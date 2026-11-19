@@ -1,0 +1,14 @@
+---
+title: "Deck"
+pdf: ../deck.pdf
+toc: false
+body-classes: deck-page
+---
+
+<!--
+This page shows your slide deck on the minisite. Write your slides in
+deck.qmd at the top of the repository, not here; the build makes deck.pdf
+from it.
+-->
+
+{{< include ../site/_paper.md >}}
