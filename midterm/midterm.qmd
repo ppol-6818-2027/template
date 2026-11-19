@@ -1,0 +1,63 @@
+---
+title: "Your title: the research question in at most 75 characters"
+subtitle: "Registered report"
+author: "Pair NN: your names"
+date: today
+format: paper-typst
+---
+
+<!--
+This file is your registered report. A registered report is a pre-analysis plan written as a journal submission: reviewers judge the question and the design before any result exists. Yours follows the Stage 1 [template](https://www.nature.com/documents/Nature_Template_RR_Stage1.docx) for [registered reports at Nature](https://www.nature.com/nature/for-authors/registered-reports), with the changes made here.
+
+Write about 2,000 words, counting the introduction through the discussion. The summary, the references, the exhibits, and the design table do not count. Describe your planned analyses in the future tense. Keep the headings and their order, and write your text under each one.
+
+Every sentence in this file is your own. Your agent writes the code that makes your exhibits and saves them in this folder. It may place an exhibit, format a table, and fix a reference in this file. It never writes or rewords a sentence.
+-->
+
+## Summary
+
+<!-- At most 150 words: the policy, your question, your method, and the results that would confirm or contradict your hypotheses. -->
+
+## Introduction
+
+<!-- The policy, the studies that motivate your question, and your numbered hypotheses. State each hypothesis in terms of your outcome and the direction of the effect. For each one, say how you will read every possible result, including a result against your prediction, and point to the design table. Use no subheadings. -->
+
+## Methods
+
+<!-- Four parts: context and data; causal identification strategy, with the main threat to it; sampling plan; and analysis plan. The analysis plan states your main estimate: its outcome, its comparison, its controls, and its weights. -->
+
+### Context and data
+
+<!-- The policy, and where and when it applies. Your data: the American Community Survey samples and years, the unit of observation, the people you include and exclude with your reasons, and your coding of treatment. -->
+
+### Causal identification strategy
+
+<!-- Your design, the comparison that identifies the effect, and the assumption it rests on. Explain why this design fits your policy's variation and why at least one alternative does not. Name the main threat to the design and your answer to it. -->
+
+### Sampling plan
+
+<!-- Your sample and its size. Your survey (weeks 7 and 8) and your power simulation (week 9) belong here. Until you have them, name the parts you will add. -->
+
+### Analysis plan
+
+<!-- Your main estimate: its outcome, its comparison, its controls, and its weights, written as your estimating equation with every term defined. Your secondary outcomes, your multiple-testing approach, and your heterogeneity and mechanism tests (week 10) belong here. Until you have them, name the parts you will add. Plan no exploratory analyses here. -->
+
+## Results
+
+<!-- Table 1 and Figure 1. Table 1 is your balance table, comparing your treated and comparison groups before the policy, or the descriptive statistics your design depends on. Figure 1 is a static figure that illustrates your design: how treatment is assigned and which comparison identifies your effect. It is separate from your animated figure. Other exhibits from weeks 4 and 5 may follow these two. Do not estimate the effect of the policy. -->
+
+## Discussion
+
+<!-- One paragraph on the question your plan will answer. -->
+
+## Design table
+
+<!-- One row for each hypothesis, with the five columns of the Nature template: question, hypothesis, sampling plan, analysis plan, and interpretation given different outcomes. Add a row whenever you add a hypothesis. -->
+
+| Question | Hypothesis | Sampling plan | Analysis plan | Interpretation given different outcomes |
+|----------|------------|---------------|---------------|------------------------------------------|
+|          |            |               |               |                                          |
+
+## References
+
+<!-- Every study you cite, in one consistent format. -->

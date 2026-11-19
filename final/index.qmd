@@ -1,0 +1,12 @@
+---
+title: "Final paper"
+pdf: final.pdf
+toc: false
+---
+
+<!--
+This page shows your final paper on the minisite. Write your paper in
+final.qmd, not here; the build makes final.pdf from it.
+-->
+
+{{< include ../site/_paper.md >}}

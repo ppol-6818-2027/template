@@ -1,0 +1,12 @@
+---
+title: "Registered report"
+pdf: midterm.pdf
+toc: false
+---
+
+<!--
+This page shows your registered report on the minisite. Write your report in
+midterm.qmd, not here; the build makes midterm.pdf from it.
+-->
+
+{{< include ../site/_paper.md >}}

@@ -5,3 +5,6 @@ $font-size-root: 17px;
 /*-- scss:rules --*/
 main.content { max-width: 760px; }
 figure img, p img { border: 1px solid #e2e8f0; border-radius: 6px; }
+.paper-open { margin-bottom: 1rem; }
+.paper-embed { height: 85vh; border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; }
+@media (max-width: 767.98px) { .paper-embed { display: none; } }

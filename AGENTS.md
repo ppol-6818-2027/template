@@ -7,8 +7,17 @@ This is a student repository for PPOL 6818, Experimental Research Design and Imp
 The course AI policy (syllabus, "AI Policy") governs this repository.
 
 - **Write code freely.** Data work, tables, figures, simulations, power calculations, the KoboToolbox form (XLSForm) and the minisite build should be AI-assisted. Prefer R; use the packages already installed before adding new ones.
-- **Never write prose the student submits.** Do not draft, rewrite, edit, polish, translate or summarize text for the landing page, memo, pre-analysis plan or slide text, and do not generate images. If asked, decline in one sentence, cite the course AI policy, and offer to help with the code or data instead. Code comments, commit messages and README notes about how to run the code are fine.
+- **Never write prose the student submits.** Do not draft, rewrite, edit, polish, translate or summarize text for the landing page, memo, pre-analysis plan, slide text, registered report or final paper, and do not generate images. If asked, decline in one sentence, cite the course AI policy, and offer to help with the code or data instead. Code comments, commit messages and README notes about how to run the code are fine.
 - You may explain concepts, methods, errors and what code does, so the student can explain the key research processes in their own words.
+
+## The registered report and the final paper
+
+The pair writes two papers: the registered report in `midterm/midterm.qmd` and the final paper in `final/final.qmd`. Each renders to a PDF (`format: paper-typst`, from `_extensions/paper/`), and the minisite shows it.
+
+- In `midterm/` and `final/` you may write the run file (`run.R`) and the exhibits it saves in that folder's `exhibits/`.
+- You may change the layout of the two papers: place an exhibit, format a table, fix a cross-reference or a citation.
+- Never write or reword a sentence in `midterm.qmd` or `final.qmd`, and never write in the comments that hold the instructions. This includes captions and table notes: the student writes them.
+- Keep `format: paper-typst` in each paper's front matter. Do not edit `_extensions/` or the pages that show the PDFs (`midterm/index.qmd`, `final/index.qmd`).
 
 ## Show that the code did what was intended
 
@@ -45,6 +54,7 @@ Run every piece of R code in the student's RStudio session, through the `rstudio
 - `run.R` runs everything from a fresh clone: it downloads the data and sources the scripts in order. Keep it that way; a new script gets a line in `run.R`.
 - Paths are relative to the repository root. No `setwd()`, no absolute paths.
 - Commit small steps with clear messages, and push when a piece works. The repository is private and belongs to the course organization.
-- The minisite is a Quarto website at the repository root: `_quarto.yml`, the landing page `index.qmd` and the deck `deck.qmd` (reveal.js). It is built into `docs/` with `ppol6818::build_site()` (Addins > Build minisite), and only `docs/` is published, publicly, by GitHub Pages. Keep `execute: enabled: false`: no code runs during the build.
-- Exhibits reach the minisite through `exhibits/`: scripts sourced by `run.R` write each figure there (`ggsave("exhibits/week02.png", ...)`, an interactive figure with `htmlwidgets::saveWidget(..., "exhibits/name.html", selfcontained = TRUE)`), and the pages embed those files. Nothing in `exhibits/` or `docs/` may include microdata, rows of data, keys or anything the student has not chosen to publish: only aggregate tables and figures.
+- The minisite is a Quarto website at the repository root: `_quarto.yml`, the landing page `index.qmd`, the deck `deck.qmd` (reveal.js), and a page for each paper that shows its PDF. It is built into `docs/` with `ppol6818::build_site()` in the R terminal (Addins > Build minisite in RStudio), and only `docs/` is published, publicly, by GitHub Pages. The build first pulls the partner's pushed work, then stops if an exhibit a page or paper shows is missing. Keep `execute: enabled: false`: no code runs during the build, so the papers hold no R code chunks.
+- `midterm/run.R` and `final/run.R` make each paper's exhibits into `midterm/exhibits/` and `final/exhibits/`, and the root `run.R` runs both. A paper shows a figure as `![Caption.](exhibits/figure1.png){#fig-name}` and a table, saved as Markdown with `knitr::kable()`, inside a `::: {#tbl-name}` block with `{{< include exhibits/table1.md >}}` and its caption.
+- Exhibits reach the landing page and deck through `exhibits/`: scripts sourced by `run.R` write each figure there (`ggsave("exhibits/week02.png", ...)`, an interactive figure with `htmlwidgets::saveWidget(..., "exhibits/name.html", selfcontained = TRUE)`), and the pages embed those files. Nothing in an `exhibits/` folder or in `docs/` may include microdata, rows of data, keys or anything the student has not chosen to publish: only aggregate tables and figures.
 - Never write the text of `index.qmd` or `deck.qmd` (the prose rule above). You may add the structure the student asks for: a new slide's heading, image and empty note block, a figure's embed code.

@@ -14,6 +14,12 @@ dir.create("data", showWarnings = FALSE)
 dir.create("exhibits", showWarnings = FALSE)
 # source("R/03-exhibits.R")
 
-# 4. Build the minisite into docs/ (or Addins > Build minisite)
+# 4. The exhibits for the registered report and the final paper, written
+#    into midterm/exhibits/ and final/exhibits/
+source("midterm/run.R")
+source("final/run.R")
+
+# 5. Build the minisite into docs/: in the R terminal, ppol6818::build_site()
+#    (in RStudio, Addins > Build minisite)
 # ppol6818::build_site()
 

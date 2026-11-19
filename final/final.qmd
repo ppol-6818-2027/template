@@ -1,0 +1,59 @@
+---
+title: "Your title"
+subtitle: "Final paper"
+author: "Pair NN: your names"
+date: today
+format: paper-typst
+---
+
+<!--
+This file is your final paper. It turns your registered report into a short article with preliminary results, and it follows the limits of an [*American Economic Review: Insights* article](https://www.aeaweb.org/journals/aeri/submissions).
+
+Write 4,000 to 5,000 words, counting the introduction through the conclusion. Include at most five tables and figures, each no longer than one page. Further exhibits go in the appendix. The design table stays in your registered report and does not appear here. Keep the headings and their order, and write your text under each one.
+
+Every sentence in this file is your own. Your agent writes the code that makes your exhibits and saves them in this folder. It may place an exhibit, format a table, and fix a reference in this file. It never writes or rewords a sentence.
+-->
+
+## Abstract
+
+<!-- At most 100 words. -->
+
+## Introduction
+
+<!-- The policy question, your design, and your preliminary results. -->
+
+## Policy and data
+
+<!-- The policy, and where and when it applies. Your American Community Survey samples, your sample, and your coding of treatment. -->
+
+## Design
+
+<!-- Your comparison, your causal diagram, and the main threat to it. -->
+
+## Survey
+
+<!-- The measures your KoboToolbox form adds to the American Community Survey, and the findings of your checks. -->
+
+## Power
+
+<!-- Your simulated power, your false positive rate, and your minimum detectable effect, set against the effect sizes that matter for the policy. -->
+
+## Preliminary results
+
+<!-- Your main table, your event-study figure or its equivalent, and your robustness checks. Call them preliminary. -->
+
+## Pre-specified analyses
+
+<!-- Your outcome hierarchy, your multiple-testing approach, and your heterogeneity and mechanism tests. -->
+
+## Conclusion
+
+<!-- The commitments in your plan that your preliminary results do not settle. -->
+
+## References
+
+<!-- Every study you cite, in one consistent format. -->
+
+## Appendix
+
+<!-- Your KoboToolbox form and any further exhibits. -->

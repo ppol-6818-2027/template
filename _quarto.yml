@@ -1,15 +1,22 @@
-# The minisite: a landing page and a slide deck, built into docs/, the only
-# public part of this repository. Build it with ppol6818::build_site().
-# Nothing runs during the build: run.R writes the exhibits into exhibits/,
-# and the pages show them.
+# The minisite: a landing page, a slide deck and the two papers, built into
+# docs/, the only public part of this repository. Build it with
+# ppol6818::build_site(). Each paper renders to a PDF (format paper-typst,
+# from _extensions/paper/), and its page (midterm/index.qmd,
+# final/index.qmd) shows that PDF. Nothing runs during the build: run.R
+# writes the exhibits into exhibits/, midterm/exhibits/ and final/exhibits/,
+# and the pages and papers show them.
 project:
   type: website
   output-dir: docs
   render:
     - index.qmd
     - deck.qmd
+    - midterm/midterm.qmd
+    - midterm/index.qmd
+    - final/final.qmd
+    - final/index.qmd
   resources:
-    - exhibits/*
+    - /exhibits/*
 
 website:
   title: "PPOL 6818 project"
@@ -19,6 +26,10 @@ website:
         text: Plan
       - href: deck.qmd
         text: Deck
+      - href: midterm/index.qmd
+        text: Registered report
+      - href: final/index.qmd
+        text: Final paper
 
 execute:
   enabled: false
