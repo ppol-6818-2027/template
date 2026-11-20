@@ -28,7 +28,7 @@ Every sentence in this file is your own. Your agent writes the code that makes y
 
 ## Design
 
-<!-- Your comparison, your causal diagram, and the main threat to it. -->
+<!-- Your comparison, your causal diagram, and the main threat to it. Then one paragraph that compares the design you registered at the mid-term, with its dated amendments, with the design you carried out, and says why each difference arose. -->
 
 ## Survey
 
